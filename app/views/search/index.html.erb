@@ -8,12 +8,12 @@
     <th>Distance</th>
     <th>Access Times</th>
   </tr>
-  <%= @stations.each_with_index do |station| %>
-    <tr class=".result result_<%= index %>">
+  <% @stations.each_with_index do |station, index| %>
+    <tr class="result result_<%= index %>">
       <td><%= station.name %></td>
       <td><%= station.address %></td>
       <td><%= station.fuel_types %></td>
-      <td><%= station.distance %></td>
+      <td><%= station.distance %> miles</td>
       <td><%= station.access_times %></td>
     </tr>
   <% end %>

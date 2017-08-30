@@ -39,7 +39,7 @@ describe Station do
         expect(result.name).to eq('UDR')
         expect(result.address).to eq('800 Acoma St')
         expect(result.fuel_types).to eq('ELEC')
-        expect(result.distance).to eq(0.31422)
+        expect(result.distance).to eq(0.31)
         expect(result.access_times).to eq('24 hours daily')
     end
   end
