@@ -42,5 +42,14 @@ describe Station do
         expect(result.distance).to eq(0.31)
         expect(result.access_times).to eq('24 hours daily')
     end
+
+    it "can create multiple stations from data" do
+      VCR.use_cassette('models/stations') do
+        data = NrelService.stations_by_zip('80203')[:fuel_stations]
+        result = Station.create_from_data(data)
+        expect(result.count).to eq 10
+        expect(result.first).to be_instance_of Station
+      end
+    end
   end
 end

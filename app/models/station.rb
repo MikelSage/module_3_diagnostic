@@ -12,4 +12,10 @@ class Station
     @distance = raw_data[:distance].round(2)
     @fuel_types = raw_data[:fuel_type_code]
   end
+
+  def self.create_from_data(data)
+    data.map do |station_data|
+      Station.new(station_data)
+    end
+  end
 end
