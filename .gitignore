@@ -16,4 +16,7 @@
 !/log/.keep
 /tmp
 
-spec/cassettes
+/spec/cassettes
+
+# Ignore application configuration
+/config/application.yml
