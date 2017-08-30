@@ -6,7 +6,7 @@ RSpec.feature 'User searches for for stations by zipcode' do
     # When I visit "/"
     visit '/'
     # And I fill in the search form with 80203
-    fill_in 'search_box' with: '80203'
+    fill_in 'search_box', with: '80203'
     # And I click "Locate"
     click_on 'Locate'
     # Then I should be on page "/search" with parameters visible in the url
